@@ -1,0 +1,40 @@
+<constructor-arg>
+   		<list>
+   			<value>Sgt. Pepper's Lonely Hearts Club Band</value>
+   			<value>Lucy in the Sky with Diamonds</value>
+   			<value>Getting Better</value>
+   			<value>Fixing a Hole</value>
+   			<!-- ...other tracks omitted for brevity... -->
+   		</list>
+   	</constructor-arg>
+   	
+   	
+   	
+   	<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+   	<constructor-arg value="The Beatles" />
+   	
+   	
+   	<constructor-arg ref="compactDisc" />
+   	
+   	
+   	<bean id="cdPlayer" class="soundsystem.CDPlayer">
+   	<constructor-arg ref="compactDisc" />
+   </bean> 
+   
+   
+   <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context">
+   <!-- configuration details go here -->
+   
+   <bean id="compactDisc" class="soundsystem.SgtPeppers">
+   	
+   </bean>
+   <bean id="cdPlayer2" class="soundsystem.CDPlayer">
+   	<constructor-arg ref="compactDisc" />
+   </bean> 
+</beans>

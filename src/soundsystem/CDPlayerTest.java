@@ -11,7 +11,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=CDPlayerConfig.class)
+//@ContextConfiguration(classes=CDPlayerConfig.class)
+@ContextConfiguration(value="Beans.xml")
 public class CDPlayerTest {
 	
 	@Rule
