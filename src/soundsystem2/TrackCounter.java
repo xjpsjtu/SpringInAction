@@ -1,4 +1,4 @@
-package soundsystem;
+package soundsystem2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,14 +6,13 @@ import java.util.Map;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 
 @Aspect
 public class TrackCounter {
 	private Map<Integer, Integer> trackCounts = new HashMap<Integer, Integer>();
 	
 	@Pointcut(
-	   "execution(* soundsystem.BlankDisc.playTrack(int)) " +
+	   "execution(* soundsystem2.BlankDisc.playTrack(int)) " +
 	   " && args(trackNumber)")
 	public void trackPlayed(int trackNumber){}
 	

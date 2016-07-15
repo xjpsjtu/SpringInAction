@@ -1,11 +1,10 @@
-package soundsystem;
+package soundsystem2;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component(value="bd")
+@Component
 public class BlankDisc implements CompactDisc{
 	
 	private String title;
@@ -15,13 +14,12 @@ public class BlankDisc implements CompactDisc{
 	public BlankDisc(){
 		
 	}
-	
-//	public BlankDisc(String title, String artist, List<String> tracks){
-//		this.title = title;
-//		this.artist = artist;
-//		this.tracks = tracks;
-//	}
-	@Override
+	public BlankDisc(String title, String artist, List<String> tracks){
+		this.title = title;
+		this.artist = artist;
+		this.tracks = tracks;
+	}
+
 	public void play() {
 		// TODO Auto-generated method stub
 		System.out.println("Playing " + title + " by " + artist);
@@ -42,4 +40,5 @@ public class BlankDisc implements CompactDisc{
 		String str = tracks.get(k);
 		System.out.println(str);
 	}
+	
 }
